@@ -1,0 +1,51 @@
+// Procedure
+PROCEDURE dot_product(v1,v2,product)
+VAR
+    i: INTEGER
+
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        product = product + (v1[i]*v2[i])
+    END_FOR
+END
+ALGORITHM Dot product procedure
+VAR
+   v1,v2 : ARRAY_OF FLOAT
+   vec :ARRAY_OF ARRAY_OF FLOAT
+   i: INTEGER
+   product: FLOAT 
+BEGIN
+    FOR i FROM 0 TO n-1 DO
+    product = 0
+       dot_product (vec[i].v1,vec[i].v2, product)
+        IF (product=0) THEN
+            write ("The two vectors are orthogonal")
+        END_IF
+    END_FOR 
+END
+
+// function
+FUNCTION dot_product(v1,v2) : FLOAT
+VAR
+    i: INTEGER
+    product : FLOAT = 0
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        product = product + (v1[i]*v2[i])
+    END_FOR
+    RETURN product ;
+END
+ALGORITHM Dot product function 
+VAR
+   v1,v2 : ARRAY_OF FLOAT
+   vec :ARRAY_OF ARRAY_OF FLOAT
+   i: INTEGER
+BEGIN
+    FOR i FROM 0 TO n-1 DO
+       res = product (vec[i].v1,vec[i].v2)
+        IF (res=0) THEN
+            write ("The two vectors are orthogonal")
+        END_IF
+    END_FOR 
+END
+
